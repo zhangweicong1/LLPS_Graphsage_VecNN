@@ -13,6 +13,7 @@
 ​	for each node *v* with LLMs embedding in the RPI network, two SAGE layers compute:
 
 
+
 $$
 {\bar{x}}_{{\mathscr{N}}\left(v\right)}^{\left(k\right)}={{\rm{AGGREGATE}}}_{k}\left(\left\{{\bar{x}}_{u}^{\left(k-1\right)},\forall u\in {\mathscr{N}}\left(v\right)\right\}\right),
 $$
@@ -28,6 +29,7 @@ $$
 where *k* = 1, 2. *N(v)* denotes the neighborhood of node v,||∙|| represents the Euclidean norm. 
 
 ​	Next, We concatenate the embedding features from the RNA-FM LLM with those from the Graph Neural Network (GNN), and then feed the combined vector into the VecNN architecture. The detailed calculations are formulated as follows:
+
 
 
 $$
