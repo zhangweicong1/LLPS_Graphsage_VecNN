@@ -11,6 +11,8 @@
 ​	To capture the intricate interactions between RNAs and proteins, an inductive node representation learning graph neural network (GNN)   [[Inductive Representation Learning on Large Graphs]](https://arxiv.org/abs/1706.02216) is deployed, offering an efficient approach to generating node representations from the available RPI network. This GNN module consists of two SAGE layers designed to rapidly learn a localized embedding function through neighbor sampling and aggregation. Specifically, neighbors are randomly sampled from a target node’s first-order neighborhood, followed by recursive sampling from subsequent neighborhoods in the consecutive layer. Following each sampling layer, a learnable aggregation function consolidates the feature vectors of neighboring nodes, explicitly considering both neighbor features and their relative relationships to ensure strong generalization capabilities. Ultimately, this pipeline yields a fixed-dimensional embedding representation for each node within the RNA–protein interaction graph.
 
 ​	for each node *v* with LLMs embedding in the RPI network, two SAGE layers compute:
+
+
 $$
 {\bar{x}}_{{\mathscr{N}}\left(v\right)}^{\left(k\right)}={{\rm{AGGREGATE}}}_{k}\left(\left\{{\bar{x}}_{u}^{\left(k-1\right)},\forall u\in {\mathscr{N}}\left(v\right)\right\}\right),
 $$
@@ -26,6 +28,8 @@ $$
 where *k* = 1, 2. *N(v)* denotes the neighborhood of node v,||∙|| represents the Euclidean norm. 
 
 ​	Next, We concatenate the embedding features from the RNA-FM LLM with those from the Graph Neural Network (GNN), and then feed the combined vector into the VecNN architecture. The detailed calculations are formulated as follows:
+
+
 $$
 {\widetilde{x}}_{0}={\rm{CONCAT}}\left({\bar{x}}_{0},{z}_{0}\right)
 $$
@@ -52,7 +56,7 @@ $$
 
 ​	We chose a 1D convolutional layer as the feature extraction layer, and the RNA embeddings are individually input into the 1D convolutional layer with a kernel size of 3 to extract their features. These features then go through a dense layer that outputs a 1024-dimensional vector to standardize the dimensions. Next, the RNA embeddings are sent through two fully connected dense layers, resulting in the final binding probability output.
 
-![image-20260621193436814](/Users/isou/Library/Application Support/typora-user-images/image-20260621193436814.png)
+![pipeline](figures/pipeline.png)
 
 ## Datasets
 
