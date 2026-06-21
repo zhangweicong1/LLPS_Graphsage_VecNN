@@ -14,14 +14,7 @@
 
 
 $$
-\bar{x}_{\mathscr{N}(v)}^{(k)}
-=
-\mathrm{AGGREGATE}_k
-\left(
-\left\{
-\bar{x}_{u}^{(k-1)} \mid u \in \mathscr{N}(v)
-\right\}
-\right)
+\bar{x}_{\mathscr{N}(v)}^{(k)}=\mathrm{AGGREGATE}_k\big(\{ \bar{x}_{u}^{(k-1)} \mid u \in \mathscr{N}(v) \}\big)
 $$
 
 $$
