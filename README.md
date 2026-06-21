@@ -12,8 +12,6 @@
 
 ​	for each node *v* with LLMs embedding in the RPI network, two SAGE layers compute:
 
-
-
 $$
 {\bar{x}}_{{\mathscr{N}}\left(v\right)}^{\left(k\right)}={{\rm{AGGREGATE}}}_{k}\left(\left\{{\bar{x}}_{u}^{\left(k-1\right)},\forall u\in {\mathscr{N}}\left(v\right)\right\}\right),
 $$
