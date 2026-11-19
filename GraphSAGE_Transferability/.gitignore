@@ -1,0 +1,124 @@
+
+# ============================================================
+# GraphSAGE_Transferability - Git Ignore Configuration
+# ============================================================
+# All paths are relative to GraphSAGE_Transferability/
+# ============================================================
+
+
+# ============================================================
+# 01. Root directories
+# ============================================================
+
+# Keep directory structure only
+/all_data/*
+!/all_data/.gitkeep
+
+# Ignore entire directories
+/Pre_training_Graph_neural_network/
+/RNA_Sequence_alignment/
+
+
+# ============================================================
+# 02. Graphsage_MLP / Graphsage_VecNN
+# ============================================================
+
+# Ignore entire directory
+/Graphsage_MLP/Graphsage_VecNN/use_Conv1d/
+
+
+# ============================================================
+# 03. Graphsage_MLP / LLPS_Benchmark
+# ============================================================
+
+# Keep directory structure only
+/Graphsage_MLP/LLPS_Benchmark/HAT_MLP_Fusion/*
+!/Graphsage_MLP/LLPS_Benchmark/HAT_MLP_Fusion/.gitkeep
+
+/Graphsage_MLP/LLPS_Benchmark/MLP_Fusion/graphsage_embedding0/*
+!/Graphsage_MLP/LLPS_Benchmark/MLP_Fusion/graphsage_embedding0/.gitkeep
+
+/Graphsage_MLP/LLPS_Benchmark/MLP_Fusion/graphsage_embedding1/*
+!/Graphsage_MLP/LLPS_Benchmark/MLP_Fusion/graphsage_embedding1/.gitkeep
+
+# Ignore entire directory
+/Graphsage_MLP/LLPS_Benchmark/use_Conv1d/
+
+
+# ============================================================
+# 04. Graphsage_MLP / LLPS_Unseen
+# ============================================================
+
+# Keep directory structure only
+/Graphsage_MLP/LLPS_Unseen/HAT_MLP_Fusion/*
+!/Graphsage_MLP/LLPS_Unseen/HAT_MLP_Fusion/.gitkeep
+
+/Graphsage_MLP/LLPS_Unseen/MLP_Fusion/graphsage_embedding0/*
+!/Graphsage_MLP/LLPS_Unseen/MLP_Fusion/graphsage_embedding0/.gitkeep
+
+/Graphsage_MLP/LLPS_Unseen/MLP_Fusion/graphsage_embedding1/*
+!/Graphsage_MLP/LLPS_Unseen/MLP_Fusion/graphsage_embedding1/.gitkeep
+
+# Ignore entire directory
+/Graphsage_MLP/LLPS_Unseen/use_Conv1d/
+
+
+# ============================================================
+# 05. Graphsage_MLP / Pretrain_Graphsage
+# ============================================================
+
+# Keep directory structure only
+/Graphsage_MLP/Pretrain_Graphsage/*
+!/Graphsage_MLP/Pretrain_Graphsage/.gitkeep
+
+
+# ============================================================
+# 06. LLMs_embedding / RNA-FM / hierarchical-transformers
+# ============================================================
+
+# Ignore entire directories
+/LLMs_embedding/RNA-FM/bin/hierarchical-transformers/models/test/
+/LLMs_embedding/RNA-FM/bin/hierarchical-transformers/models/hat/
+
+# Ignore specific Python script
+/LLMs_embedding/RNA-FM/bin/hierarchical-transformers/models/distribution_testing.py
+
+
+# ============================================================
+# 07. LLMs_embedding / RNA-FM
+# ============================================================
+
+# Keep directory structure only
+/LLMs_embedding/RNA-FM/data/*
+!/LLMs_embedding/RNA-FM/data/.gitkeep
+
+/LLMs_embedding/RNA-FM/GPU/*
+!/LLMs_embedding/RNA-FM/GPU/.gitkeep
+
+/LLMs_embedding/RNA-FM/HAT_result/*
+!/LLMs_embedding/RNA-FM/HAT_result/.gitkeep
+
+
+# ============================================================
+# 08. split_dataset_unseen.dataset
+# ============================================================
+
+# Ignore entire directory
+/split_dataset_unseen.dataset/Filter_sequence_similarity/
+
+# Keep directory structure only
+/split_dataset_unseen.dataset/all_data/*
+!/split_dataset_unseen.dataset/all_data/.gitkeep
+
+
+# ============================================================
+# 09. Python temporary files
+# ============================================================
+
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
